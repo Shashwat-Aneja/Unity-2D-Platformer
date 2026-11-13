@@ -30,7 +30,7 @@ public class EnemyPatrol : MonoBehaviour
             currentTarget = (currentTarget == pointA) ? pointB : pointA;
 
             // Flip sprite
-            transform.localScale = new Vector3(-transform.localScale.x, 1f, 1f);
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         }
     }
 }
