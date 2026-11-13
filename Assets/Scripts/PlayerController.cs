@@ -22,8 +22,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
-        Jump();
         GroundCheck();
+        Jump();
     }
 
     void Move()
