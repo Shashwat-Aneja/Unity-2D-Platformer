@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
         // Flip player sprite
         if (xInput != 0)
-            transform.localScale = new Vector3(Mathf.Sign(xInput), 1f, 1f);
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * Mathf.Sign(xInput), transform.localScale.y, transform.localScale.z);
     }
 
     void Jump()
