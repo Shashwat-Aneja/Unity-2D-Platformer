@@ -10,7 +10,7 @@ public class EnemyPatrol : MonoBehaviour
 
     void Start()
     {
-        currentTarget = pointB;
+        currentTarget = pointB != null ? pointB : pointA;
     }
 
     void Update()
@@ -20,7 +20,7 @@ public class EnemyPatrol : MonoBehaviour
 
     void Patrol()
     {
-        transform.position = Vector2.MoveTowards(transform.position, currentTarget.position, speed * Time.deltaTime);
+        if (currentTarget == null || pointA == null || pointB == null)\n            return;\n\n        transform.position = Vector2.MoveTowards(transform.position, currentTarget.position, speed * Time.deltaTime);
 
         if (Vector2.Distance(transform.position, currentTarget.position) < 0.1f)
         {
